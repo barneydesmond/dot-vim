@@ -1,0 +1,5 @@
+Symlink vimrc into your homedir:
+
+    ln -s ~/.vim/vimrc ~/.vimrc
+
+Now go install Vundle: https://github.com/gmarik/Vundle.vim#quick-start
