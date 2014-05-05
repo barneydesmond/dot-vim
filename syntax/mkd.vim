@@ -49,6 +49,16 @@ syn region mkdURL matchgroup=mkdDelimiter       start="("     end=")"  contained
 "                            ------------ _____________________ --------------------------- ________________________ ----------------- __
 syntax match   mkdInlineURL /https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
 
+" Indirectly from http://karottenreibe.github.io/2009/10/25/liquid-markdown-vim-and-jekyll/
+" https://github.com/PProvost/vim-markdown-jekyll
+" http://www.peterprovost.org/blog/2012/04/22/editing-octopress-slash-jekyll-posts-in-vim/
+syntax match gollumTag /\[\[[a-zA-Z0-9 _-]\+\]\]/
+hi def link gollumTag Statement
+
+syntax match Comment /\%^---\_.\{-}---$/ contains=@Spell
+syntax match liquidTag /{[{%].*[}%]}/
+hi def link liquidTag Statement
+
 " Link definitions: [id]: URL (Optional Title)
 " TODO handle automatic links without colliding with htmlTag (<URL>)
 syn region mkdLinkDef matchgroup=mkdDelimiter   start="^ \{,3}\zs\[" end="]:" oneline nextgroup=mkdLinkDefTarget skipwhite
@@ -69,7 +79,7 @@ syn match  mkdListItem  "^\s*\d\+\.\s\+"
 syn match  mkdCode      /^\s*\n\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/
 syn match  mkdLineBreak /  \+$/
 syn region mkdCode      start=/\\\@<!`/                   end=/\\\@<!`/
-syn region mkdCode      start=/\s*```[^`]*/          end=/[^`]*```\s*/
+syn region mkdCode      start=/\s*``[^`]*/          end=/[^`]*``\s*/
 syn region mkdBlockquote start=/^\s*>/              end=/$/                 contains=mkdLineBreak,mkdLineContinue,@Spell
 syn region mkdCode      start="<pre[^>]*>"         end="</pre>"
 syn region mkdCode      start="<code[^>]*>"        end="</code>"
