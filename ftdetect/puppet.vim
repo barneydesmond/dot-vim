@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.pp set noexpandtab filetype=puppet tabstop=4
+au BufRead,BufNewFile *.pp set noexpandtab filetype=puppet tabstop=8
