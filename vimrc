@@ -16,6 +16,8 @@ Bundle 'godlygeek/tabular.git'
 "Bundle 'rodjek/vim-puppet'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'Shougo/vimproc'
 
 " filetype plugin indent on
 filetype plugin on
