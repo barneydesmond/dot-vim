@@ -16,6 +16,7 @@ Bundle 'godlygeek/tabular.git'
 "Bundle 'rodjek/vim-puppet'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'Shougo/vimproc'
 
@@ -30,6 +31,12 @@ set hlsearch
 set modeline
 set scrolloff=3
 set linebreak
+
+autocmd BufNewFile,BufRead *.py setlocal expandtab sts=4
+
+au FileType mkd set tw=80
+
+"set mouse=a
 
 let g:syntastic_enable_signs=1
 
@@ -61,6 +68,15 @@ map <F12> {gq}
 map <F10> :set foldenable!<Return>
 map <F5> :set spell! spelllang=en_au<CR>
 map <F4> zg
+
+map <F6> :make<Return><Return>
+
+inoremap <F2> <Esc>:s/^\([ \t]*\)\([^ \t]\)/\1#\2/<Return>:noh<Return>
+nnoremap <F2> :s/^\([ \t]*\)\([^ \t]\)/\1#\2/<Return>:noh<Return>
+xnoremap <F2> :s/^\([ \t]*\)\([^ \t]\)/\1#\2/<Return>:noh<Return>
+inoremap <F3> <Esc>:s/^\([ \t]*\)#\([^ \t]\)/\1\2/<Return>
+nnoremap <F3> :s/^\([ \t]*\)#\([^ \t]\)/\1\2/<Return>
+xnoremap <F3> :s/^\([ \t]*\)#\([^ \t]\)/\1\2/<Return>
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader
 " fold an html tag
