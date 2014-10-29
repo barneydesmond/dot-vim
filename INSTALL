@@ -1,5 +1,13 @@
+Clone this repo:
+
+    git clone git@github.com:barneydesmond/dot-vim.git ~/.vim
+
 Symlink vimrc into your homedir:
 
     ln -s ~/.vim/vimrc ~/.vimrc
 
 Now go install Vundle: https://github.com/gmarik/Vundle.vim#quick-start
+
+1. `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+2. Add all your plugin calls to vimrc, this should already be in the repo.
+3. Kick off the install: `vim +PluginInstall +qall`
