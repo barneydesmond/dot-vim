@@ -4,23 +4,25 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Your bundles go here:
-Bundle 'scrooloose/syntastic'
-Bundle 'godlygeek/tabular.git'
-"Bundle 'rodjek/vim-puppet'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
-Bundle 'eagletmt/ghcmod-vim'
-Bundle 'Shougo/vimproc'
+Plugin 'scrooloose/syntastic'
+Plugin 'godlygeek/tabular.git'
+"Plugin 'rodjek/vim-puppet'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'Shougo/vimproc'
 
-" filetype plugin indent on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+" filetype plugin indent on    " required
 filetype plugin on
 
 
