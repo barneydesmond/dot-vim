@@ -11,14 +11,18 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Your bundles go here:
-Plugin 'scrooloose/syntastic'
+if v:version > 700 || (v:version == 700 && has('patch175'))
+    Plugin 'scrooloose/syntastic'
+endif
 Plugin 'godlygeek/tabular.git'
 "Plugin 'rodjek/vim-puppet'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'eagletmt/ghcmod-vim'
-Plugin 'Shougo/vimproc'
+if v:version >= 702
+    Plugin 'Shougo/vimproc'
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
