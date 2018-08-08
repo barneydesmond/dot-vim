@@ -18,6 +18,7 @@ Plugin 'godlygeek/tabular.git'
 "Plugin 'rodjek/vim-puppet'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'eagletmt/ghcmod-vim'
 if v:version >= 702
@@ -46,6 +47,8 @@ au FileType mkd set tw=80
 
 let g:syntastic_enable_signs=1
 
+
+
 " If you don't have a nice font (like Pragmata Pro), then set this to 0 and
 " Airline will fallback to less fancy symbols instead.
 let g:airline_powerline_fonts = 1
@@ -56,6 +59,13 @@ set laststatus=2
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+
+" Theme selection from https://github.com/vim-airline/vim-airline/wiki/Screenshots
+let g:airline_theme='deus'
+" Tweaks the appearance if you set your theme to solarized
+"let g:airline_solarized_bg='dark'
+
+
 
 " http://lglinux.blogspot.com/2008/01/rewrapping-paragraphs-in-vim.html
 map <F12> {gq}
