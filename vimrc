@@ -46,8 +46,11 @@ au FileType mkd set tw=80
 
 let g:syntastic_enable_signs=1
 
-"let g:airline_powerline_fonts = 1
-" All Airline, All The Time
+" If you don't have a nice font (like Pragmata Pro), then set this to 0 and
+" Airline will fallback to less fancy symbols instead.
+let g:airline_powerline_fonts = 1
+
+" All Airline, All The Time - why wouldn't you want a status line?
 set laststatus=2
 
 if !exists('g:airline_symbols')
