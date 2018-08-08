@@ -46,27 +46,13 @@ au FileType mkd set tw=80
 
 let g:syntastic_enable_signs=1
 
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 " All Airline, All The Time
 set laststatus=2
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = 'line'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.paste = 'Þ'
-"let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
 
 " http://lglinux.blogspot.com/2008/01/rewrapping-paragraphs-in-vim.html
 map <F12> {gq}
