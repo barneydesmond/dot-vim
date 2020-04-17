@@ -50,6 +50,7 @@ endif
 autocmd BufNewFile,BufRead *.py setlocal expandtab sts=4
 
 au FileType mkd set tw=80
+autocmd FileType yaml setlocal ai ts=2 sw=2 et
 
 "set mouse=a
 
