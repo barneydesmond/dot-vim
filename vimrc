@@ -39,6 +39,14 @@ set modeline
 set scrolloff=3
 set linebreak
 
+" Jump to the last position when reopening a file
+if has("autocmd")
+  " Except when it's a git commit message, we always wanna start at the top
+  if expand("%:t") != 'COMMIT_EDITMSG'
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+  endif
+endif
+
 autocmd BufNewFile,BufRead *.py setlocal expandtab sts=4
 
 au FileType mkd set tw=80
