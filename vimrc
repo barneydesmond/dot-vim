@@ -41,10 +41,12 @@ set linebreak
 
 " Jump to the last position when reopening a file
 if has("autocmd")
-  " Except when it's a git commit message, we always wanna start at the top
-  if expand("%:t") != 'COMMIT_EDITMSG'
-    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
-  endif
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+endif
+
+" Except when it's a git commit message, then we wanna start at the top
+if has("autocmd") && expand("%:t") == "COMMIT_EDITMSG"
+  autocmd BufReadPost * execute "normal! gg"
 endif
 
 autocmd BufNewFile,BufRead *.py setlocal expandtab sts=4
