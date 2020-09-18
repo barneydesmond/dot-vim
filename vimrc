@@ -15,9 +15,8 @@ if v:version > 700 || (v:version == 700 && has('patch175'))
     Plugin 'scrooloose/syntastic'
 endif
 Plugin 'godlygeek/tabular.git'
-"Plugin 'rodjek/vim-puppet'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'eagletmt/ghcmod-vim'
@@ -63,6 +62,11 @@ let g:syntastic_enable_signs=1
 " If you don't have a nice font (like Pragmata Pro), then set this to 0 and
 " Airline will fallback to less fancy symbols instead.
 let g:airline_powerline_fonts = 1
+
+" Fixes for new workstation, distro defaults to Python3
+" https://blog.victormendonca.com/2017/09/20/additional-status-for-vim-with-powerline/
+let g:powerline_pycmd = 'py3'
+let g:airline_pycmd = 'py3'
 
 " All Airline, All The Time - why wouldn't you want a status line?
 set laststatus=2
