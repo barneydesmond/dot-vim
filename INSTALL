@@ -3,6 +3,7 @@ Clone this repo:
     git clone git@github.com:barneydesmond/dot-vim.git ~/.vim
 
 Symlink vimrc into your homedir:
+(this step shouldn't be needed now, I think. Check `:version` to see if vim is checking ~/.vim/vimrc as an rc-file location)
 
     ln -s ~/.vim/vimrc ~/.vimrc
 
