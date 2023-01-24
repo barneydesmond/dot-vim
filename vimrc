@@ -83,7 +83,8 @@ let g:airline_theme='deus'
 
 
 " http://lglinux.blogspot.com/2008/01/rewrapping-paragraphs-in-vim.html
-map <F12> {gq}
+map <F11> {gq}
+map <F12> Vgq
 
 map <F10> :set foldenable!<Return>
 map <F5> :set spell! spelllang=en_au<CR>
